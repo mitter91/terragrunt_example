@@ -5,7 +5,6 @@ locals {
   account_id    = local.region_vars.locals.account_id
   iam_role_name = get_env("IAM_ROLE_NAME", "PlatformAutomationAccess")
   iam_role_arn  = "arn:aws:iam::${local.account_id}:role/${local.iam_role_name}"
-  fix = "fix"
 }
 
 generate "providers-common" {
