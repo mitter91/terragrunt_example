@@ -9,12 +9,14 @@ locals {
   vpc_cidr = local.env_vars.locals.vpc_cidr
   tags = local.env_vars.locals.tags
   // vpc_number = split(".", local.vpc_cidr)[1]
+
+  azs = ["${local.region}a", "${local.region}b", "${local.region}c"]
 }
 
 inputs = {
   name = local.env
   cidr = local.vpc_cidr
-  azs  = ["${local.region}a", "${local.region}b", "${local.region}c"]
+  azs  = local.azs
 
   private_subnets     = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k)]
   public_subnets      = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 4)]
