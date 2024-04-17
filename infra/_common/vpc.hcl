@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://zdevteam.com/infra/tf-modules-group/tf-vpc.git//?ref=cp1.0.3"
+  source = "terraform-aws-modules/vpc/aws"
 }
 
 locals {
