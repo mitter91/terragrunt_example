@@ -14,18 +14,6 @@ locals {
   azs = ["${local.region}a", "${local.region}b", "${local.region}c"]
 }
 
-generate "providers-common" {
-  path = "providers-common.tf"
-  if_exists = "overwrite_terragrunt"
-  contents = <<EOF
-provider "aws" {
-  region = "${local.region}"
-
-  allowed_account_ids = ["${local.account_id}"]
-}
-EOF
-}
-
 inputs = {
   name = local.env
   cidr = local.vpc_cidr
