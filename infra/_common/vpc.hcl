@@ -11,7 +11,7 @@ locals {
   tags = local.env_vars.locals.tags
   // vpc_number = split(".", local.vpc_cidr)[1]
 
-  azs = ["${local.region}a", "${local.region}b", "${local.region}c"]
+  azs = ["${local.region}b", "${local.region}c"]
 }
 
 generate "providers-common" {
