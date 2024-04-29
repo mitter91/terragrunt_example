@@ -35,7 +35,7 @@ inputs = {
   public_subnets      = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 4)]
   database_subnets    = [for k, v in local.azs : cidrsubnet(local.vpc_cidr, 8, k + 8)]
 
-  enable_nat_gateway   = true
+  enable_nat_gateway   = false
   enable_dns_hostnames = true
   enable_dns_support   = true
   create_igw           = true
