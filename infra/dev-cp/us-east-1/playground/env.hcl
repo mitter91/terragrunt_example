@@ -4,7 +4,7 @@ locals {
   account_id = local.region_vars.locals.account_id
   unit = "playground"
   env = "${local.region_vars.locals.tier}-${local.region_vars.locals.entity}-${local.unit}"
-  vpc_cidr = "10.10.0.0/16"
+  vpc_cidr = "10.12.0.0/16"
 
   tags = {
     Environment = local.env
