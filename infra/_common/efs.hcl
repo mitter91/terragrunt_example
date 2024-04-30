@@ -1,5 +1,5 @@
 terraform {
-  source = "git::https://git.coinspaid.cloud/infra/tf-modules-group/tf-efs.git//?ref=cp1.0.0"
+  source = "https://github.com/terraform-aws-modules/terraform-aws-efs.git//"
 }
 
 locals {
