@@ -13,7 +13,7 @@ remote_state {
   backend = "s3"
   config = {
     bucket         = "dev-cp-us-east-1-tfstate"
-    key            = "${path_relative_to_include()}/terraform.tfstate"
+    key            = "stage-tg/${path_relative_to_include()}/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
   }
