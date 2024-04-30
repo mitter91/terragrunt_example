@@ -5,3 +5,7 @@ include "root" {
 include "common" {
   path = "../../../../_common/vpc.hcl"
 }
+
+inputs = {
+  enable_nat_gateway   = true
+}
