@@ -9,7 +9,7 @@ locals {
 }
 
 dependency "vpc" {
-  config_path = "../vpc"
+  config_path = "../../../../dev-cp/us-east-1/playground/vpc"
   mock_outputs = {
     vpc_id          = "vpc-xxxxxxxx"
     azs             = ["xx-central-1x","yy-central-1y","zz-central-1z"]
@@ -19,7 +19,7 @@ dependency "vpc" {
 }
 
 dependencies {
-  paths = ["../vpc"]
+  paths = ["../../../../dev-cp/us-east-1/playground/vpc"]
 }
 
 inputs = {
