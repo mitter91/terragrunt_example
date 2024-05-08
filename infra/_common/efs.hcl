@@ -18,10 +18,6 @@ dependency "vpc" {
   }
 }
 
-dependencies {
-  paths = ["../../../../dev-cp/us-east-1/playground/vpc"]
-}
-
 inputs = {
   name             = local.env
   creation_token   = local.env
