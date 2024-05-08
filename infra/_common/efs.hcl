@@ -5,6 +5,8 @@ terraform {
 locals {
   env_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
   env = local.env_vars.locals.env
+  region = local.env_vars.locals.region
+  account_id = local.env_vars.locals.account_id
   tags = local.env_vars.locals.tags
 }
 
