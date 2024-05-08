@@ -1,5 +1,5 @@
 terraform {
-  source = "https://github.com/terraform-aws-modules/terraform-aws-efs.git//"
+  source = "git::https://github.com/terraform-aws-modules/terraform-aws-efs.git//"
 }
 
 locals {
