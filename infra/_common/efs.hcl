@@ -8,6 +8,18 @@ locals {
   tags = local.env_vars.locals.tags
 }
 
+generate "providers-common" {
+  path = "providers-common.tf"
+  if_exists = "overwrite_terragrunt"
+  contents = <<EOF
+provider "aws" {
+  region = "${local.region}"
+
+  allowed_account_ids = ["${local.account_id}"]
+}
+EOF
+}
+
 dependency "vpc" {
   config_path = "../../../../dev-cp/us-east-1/playground/vpc"
   mock_outputs = {
