@@ -41,4 +41,5 @@ inputs = {
   create_igw           = true
 
   tags = local.tags
+  create_database_subnet_group = false
 }
